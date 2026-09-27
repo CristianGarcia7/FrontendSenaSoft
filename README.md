@@ -1,5 +1,28 @@
-# Vue 3 + Vite
+# CondorTravels · Frontend
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplicación web para **reservar vuelos**, desarrollada para el **reto SenaSoft**. Cubre todo el flujo: buscar el vuelo, elegir asientos en un mapa del avión, registrar pasajeros y pagar con PayU.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Backend: [RetoSenaSoft](https://github.com/CristianGarcia7/RetoSenaSoft)
+
+## 🧭 Flujo
+
+1. **Buscar vuelos** por origen y destino (`dashboard`).
+2. **Elegir asientos** en una cuadrícula del avión que muestra los asientos disponibles, seleccionados y ocupados (`selectSeats`).
+3. **Registrar los datos** de los pasajeros (`datosPersonales`).
+4. **Pagar** con PayU y ver la confirmación (`pagar`, `paymentResponse`).
+5. Consultar **mis reservas**.
+
+Más detalle en [`SEAT_RESERVATION_GUIDE.md`](SEAT_RESERVATION_GUIDE.md).
+
+## 🧱 Stack
+
+Vue 3 · Quasar 2 · Pinia (con estado persistente) · Vue Router · Axios · Vite
+
+## 🚀 Cómo correrlo
+
+Necesitas el [backend](https://github.com/CristianGarcia7/RetoSenaSoft) en `http://127.0.0.1:8000`. Esa URL se configura en `src/plugins/pluginAxios.js`.
+
+```bash
+npm install
+npm run dev
+```
